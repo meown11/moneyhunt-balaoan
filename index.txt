@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Select Your Video</title>
+    <script>
+        // REDIRECT LOGIC: If they've already picked, don't let them stay on this page
+        /*
+        
+        if (sessionStorage.getItem('hasChosen') === 'true') {
+            window.location.replace(sessionStorage.getItem('videoURL'));
+        }
+
+        */
+
+        function selectVideo(url) {
+            // Save the choice so the browser remembers it for this session
+            //sessionStorage.setItem('hasChosen', 'true');
+            //sessionStorage.setItem('videoURL', url);
+            
+            // Redirect using replace so the index isn't kept in the history stack
+            window.location.replace(url);
+        }
+    </script>
+</head>
+<body>
+    <div class="video-container">
+        <h1>Select one video to watch:</h1>
+        <div class="video-links">
+            <button onclick="selectVideo('video1.html')">Watch Video 1</button>
+            <button onclick="selectVideo('video2.html')">Watch Video 3</button>
+            <button onclick="selectVideo('video3.html')">Watch Video 3</button>
+            <button onclick="selectVideo('video4.html')">Watch Video 4</button>
+            <button onclick="selectVideo('video5.html')">Watch Video 5</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayan ng Balaoan Video Portal</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        // REDIRECT LOGIC: If they've already picked, don't let them stay on this page
+        
+        
+        if (sessionStorage.getItem('hasChosen') === 'true') {
+            window.location.replace(sessionStorage.getItem('videoURL'));
+        }
+
+        
+
+        function selectVideo(url) {
+            // Save the choice so the browser remembers it for this session
+            sessionStorage.setItem('hasChosen', 'true');
+            sessionStorage.setItem('videoURL', url);
+            
+            // Redirect using replace so the index isn't kept in the history stack
+            window.location.replace(url);
+        }
+    </script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="card">
+            <!-- Ensure your logo file is named image_0.png -->
+            <img src="image_0.png" alt="Bayan ng Balaoan Logo" class="logo">
+            <h1>Bayan ng Balaoan</h1>
+            <!--<p>Please select a video to continue:</p>
+
+            <div class="button-grid">
+                <button onclick="selectVideo('ichi.html')">Watch Video 1</button>
+                <button onclick="selectVideo('ni.html')">Watch Video 2</button>
+                <button onclick="selectVideo('san.html')">Watch Video 3</button>
+            </div> --->
+        </div>
+    </div>
+</body>
+</html>

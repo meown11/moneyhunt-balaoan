@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        // NAVIGATION LOCK: This prevents the user from going back to the index
+        // Once this page loads, it replaces the history entry
+        window.history.pushState(null, null, window.location.href);
+        window.onpopstate = function () {
+            window.history.pushState(null, null, window.location.href);
+        };
+    </script>
+</head>
+<body>
+    <div class="video-container">
+        <h1>Play the video to reveal the prize!</h1>
+        
+        <!-- Replace 'vid1.mp4' with your specific video file name for this page -->
+        <video controls preload="metadata" width="100%">
+            <source src="500.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        
+    </div>
+</body>
+</html>

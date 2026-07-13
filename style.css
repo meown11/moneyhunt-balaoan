@@ -1,0 +1,101 @@
+/* Use a soft, elegant gradient background */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000 0%, #FFD700 100%);
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    /* Slightly transparent white */
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+}
+
+.logo {
+    max-width: 140px;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    color: #003366;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Stylish Buttons */
+.button-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    background: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 50px;
+    /* Fully rounded 'pill' shape */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover State */
+button:hover {
+    background: #FFD700;
+    /* Gold color from the logo */
+    color: #003366;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Pressed State */
+button:active {
+    transform: scale(0.98);
+}
+
+.video-container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.main-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    padding: 20px;
+    box-sizing: border-box;
+    /* Prevents padding from breaking layout */
+}
